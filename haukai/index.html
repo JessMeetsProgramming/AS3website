@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta
+			charset="utf-8"
+			name="viewport"
+			content="width=device-width, height=device-height, initial-scale=1.0"
+		/>
+
+		<title>Home | HAUKAI</title>
+
+		<!--W3.CSS framework stylesheet (primary styling)-->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+		<!--My CSS rules (secondary styling)-->
+		<link rel="stylesheet" href="styles/styles.css" />
+
+		<!--google fonts api-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!--JQuery library-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<!--slideshow and navigation scripts-->
+		<script src="scripts/slideshow.js"></script>
+		<script src="scripts/nav-menu.js"></script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-QMM6G73E20"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-QMM6G73E20');
+		</script>
+	</head>
+
+
+	<body class="w3-display-container">
+		<!--Header with logo and restaurant name-->
+		<header class="w3-row w3-light-gray">
+
+			<!--use display container to center text on top of the logo-->
+			<div class="w3-display-container w3-center w3-padding w3-margin">
+				<img
+					class="w3-opacity"
+					id="logo"
+					src="images/koru_logo3.svg"
+					alt="Koru Design"
+				/>
+				<!--display middle centers headers within display container-->
+				<a href="index.html" class="w3-display-middle">
+					<!--default headings in w3.css are segoe ui-->
+					<h1 id="haukai">THE HAUKAI</h1>
+					<h2 id="restaurant"><b>RESTAURANT</b></h2>
+				</a>
+			</div>
+
+			<!--Social media icons/links-->
+			<div class="w3-container w3-display-topright w3-padding">
+				<a href="https://www.facebook.com/">
+					<!--Facebook icon-->
+					<picture>
+						<!--prevent picture from loading when on small devices-->
+						<source srcset="images/blank_img.png" media="(max-width:600px)" />
+						<img
+							src="images/facebook-round-color.svg"
+							class="icons"
+							alt="facebook icon"
+						/>
+					</picture>
+				</a>
+				<a href="https://www.instagram.com/">
+					<!--Instagram icon-->
+					<picture>
+						<!--prevent picture from loading when on small devices-->
+						<source srcset="images/blank_img.png" media="(max-width:600px)" />
+						<img
+							src="images/instagram-round.svg"
+							class="icons"
+							alt="instagram icon"
+						/>
+					</picture>
+				</a>
+			</div>
+		</header>
+
+
+		<!-- Responsive menu - changes to hamburger menu on mobile/small tablet-->
+		<nav class="w3-bar w3-light-gray w3-large w3-mobile">
+			<!--keeping ul and li tags for screen readers-->
+			<ul class="nav-menu w3-mobile">
+				<!--w3-mobile applies block display and 100% width-->
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a
+						class="w3-hover-text-teal active-link"
+						href="index.html"
+						aria-current="page"
+						>Home</a
+					>
+				</li>
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a class="w3-hover-text-teal" href="about/about.html">About</a>
+				</li>
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a class="w3-hover-text-teal" href="reservations/reservations.html"
+						>Reservations</a
+					>
+				</li>
+				<!--Float this block of menu items right-->
+				<div class="w3-right w3-mobile">
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="menu/menu.html">Menu</a>
+					</li>
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="blog/blog.html">Blog</a>
+					</li>
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="contact/contact.html"
+							>Contact</a
+						>
+					</li>
+				</div>
+			</ul>
+			<!-- Menu for mobiles and tablets -->
+			<div class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+		</nav>
+
+
+		<main>
+			<!--Slideshow container -->
+			<div class="w3-row w3-center slide-container">
+				<!-- slide 1 - set of images based on screen size -->
+				<picture class="mySlides " id="slide1">
+					<source
+						id="slide"
+						srcset="images/restaurant_table_xs320.jpg"
+						media="(max-width: 320px)"
+					/>
+					<source
+						id="slide"
+						srcset="images/restaurant_table_small.jpg"
+						media="(max-width: 600px)"
+					/>
+					<source
+						id="slide"
+						srcset="images/restaurant_table_med.png"
+						media="(max-width: 1280px)"
+					/>
+					<source
+						id="slide"
+						srcset="images/restaurant_table_lrg.png"
+						media="(max-width: 1920px)"
+					/>
+					<img
+						id="slide"
+						src="images/restaurant_table_lrg.png"
+						alt="haukai restaurant table setting"
+					/>
+				</picture>
+
+				<!-- slide 2 - set of images based on screen size, hide on mobiles -->
+				<picture class="mySlides w3-hide-small" >
+					<source srcset="images/blank_img.png" media="(max-width:600px)" />
+					<source
+						id="slide"
+						srcset="images/scallops_med.png"
+						media="(max-width:1280px)"
+					/>
+					<source
+						id="slide"
+						srcset="images/scallops_lrg.png"
+						media="(max-width: 1920px)"
+					/>
+					<img
+						id="slide"
+						src="images/scallops_lrg.png"
+						alt="trio of scallops"
+					/>
+				</picture>
+
+				<!-- slide 3 - set of images based on screen size, hide on mobiles -->
+				<picture class="mySlides w3-hide-small">
+					<source srcset="images/blank_img.png" media="(max-width:600px)" />
+					<source
+						id="slide"
+						srcset="images/food_design_med.png"
+						media="(max-width: 1280px)"
+					/>
+					<source
+						id="slide"
+						srcset="images/food_design_lrg.png"
+						media="(max-width: 1920px)"
+					/>
+					<img
+						id="slide"
+						src="images/food_design_lrg.png"
+						alt="chef plating artfully"
+					/>
+				</picture>
+			</div> <!--end of slideshow-->
+
+
+			<!-- Feature text section-->
+			<div class="w3-container w3-center text-container">
+				<p class="feature-text w3-padding-16 w3-mobile">
+					<strong>E te iwi, he haukai tēnei kei tō aroaro, kainga!</strong>
+					<br /><em>- People, this is a feast placed before you, devour it!</em>
+				</p>
+				<p class="feature-text w3-padding-16 w3-mobile">
+					At The Haukai we have a passion for our unique heritage and culture,
+					we want to share it with the world and keep our traditions alive.
+				</p>
+			</div>
+
+		</main>
+
+
+		<footer class="w3-row w3-padding-large footer-container">
+			<!--address-->
+			<div class="w3-col m3 l3 w3-padding-small">
+				<p>
+					<strong>The Haukai Restaurant</strong><br />1 Island Street<br />Kerikeri<br />Bay
+					of Islands<br />(09) 401 4019
+				</p>
+			</div>
+
+			<!--Opening hours-->
+			<div class="w3-col m7 l7 w3-padding-small">
+				<p>
+					<strong>Opening Hours</strong><br />Wednesday-Sunday<br />11.30am-10.30pm
+				</p>
+			</div>
+
+			<!--privacy statement link-->
+			<div class="w3-col m2 l2 w3-padding-small" id="footer-links">
+				<p>
+					<a class="links" href="privacy/privacy.html">Privacy</a>
+				</p>
+				<p><a class="links" href="staff/staff.html">Staff</a></p>
+			</div>
+		</footer>
+	</body>
+</html>

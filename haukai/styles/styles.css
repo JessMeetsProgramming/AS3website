@@ -1,0 +1,497 @@
+/*headings within body*/
+h3.body-heading {
+	font-weight: bold;
+}
+
+/*HEADER rule sets----------------------------------------------------*/
+
+#haukai {
+	/*change spacing between lines*/
+	line-height:1.2;
+}
+
+#logo {
+	width: 13vmax;
+	/*prevent logo being too big for header*/
+	max-width:100px;	
+}
+
+
+/*social media icons*/
+.icons {
+	max-width:50px;
+	min-width:30px;
+	height:auto;
+	width: 5vw;
+	padding: 2px;
+}
+
+/*footer links*/
+/*remove default hyperlink styling in header and footer*/
+a {
+	text-decoration: none;
+	color: black;
+}
+/*footer*/
+a.links {
+	color:#0f63ff;
+}
+
+
+/* NAVIGATION rule sets --------------------------------------------*/
+.nav-menu {
+	padding:0;
+	margin:0;
+}
+
+a {
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* active link text color and styling */
+.active-link {
+	color:#009688;
+	text-decoration: underline;
+	text-underline-offset: 4px;
+	font-weight:bold;
+}
+
+
+/*hamburger menu for smaller devices*/
+/*displays when media query condition is met*/
+.hamburger {
+	display:none;
+}
+
+/*hamburger menu icon animation*/
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 2.5px auto; 
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+/* FOOTER rule sets -----------------------------------------------------------*/
+.footer-container {
+	background-color: #d2ddd8;
+	letter-spacing: 0.1pt;
+	font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#footer-links a:hover {
+	color: #16D6FA; 
+}
+
+
+/*INDEX page rule sets------------------------------------------------*/
+/*slide images default display none, so they display one at a time using js*/
+.mySlides {
+	display:none;	
+}
+
+/*slide position and size*/
+#slide {
+	display:block;
+	width: 80%;
+	height: auto;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+/*coloured margins containing slideshow on larger screens*/
+.slide-container {
+	background-color: #d2ddd8;
+}
+
+/* text styling*/
+p.feature-text {
+	font-family: "Baloo 2", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+	"Lucida Sans Unicode", Geneva, Verdana, sans-serif, Times, "Times New Roman",
+	serif;
+}
+
+
+
+/*RESERVATIONS page rule sets-----------------------------------------------------------------------*/
+
+/* main container for background image */
+#main {
+	position: relative;
+	max-height: 100%;
+    width: 100%;	
+	overflow-y: auto;
+}
+
+#main::before {
+	content:"";
+	background-image: url("../images/reservation_large.jpg"); /*set background image*/
+	background-size: cover; /*cover screen*/
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.85;
+}
+.content {
+	/*keep content on top of background image*/
+	position: relative;
+}
+/*content class has a default max-width of 980px*/
+.w3-content {
+	max-width:none !important;
+}
+
+/*spacing between buttons*/
+#button1, #button2 {
+	margin:5px;	
+	min-width: 150px;
+	max-width: 250px;
+	width:60vw;
+}
+
+
+/* hide booking section on page load */
+#booking-section {
+	display: none;
+}
+
+/*responsive form*/
+#booking-form {
+	width: 100%;
+	height:60vh;
+}
+
+
+/*MENU page rule sets-------------------------------------------------------*/
+
+/*font styling of menus*/
+p.menu-item, h3.menu-heading{
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	
+}
+h3.menu-heading {
+	font-weight:bold;
+}
+p.menu-description,
+p.drinks {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: lighter;
+
+}
+
+/*BLOG page rule sets-----------------------------------------------------*/
+/*responsive image with rounded top corners to match card container*/
+.blog-img {
+	width:100%; 
+	border-radius:8px 8px 0px 0px;
+}
+
+
+/*CONTACT page rule sets----------------------------------------------------*/
+
+/*map size*/
+#map {
+	max-height: 450px;
+	max-width: 450px;
+	min-width: 150px;
+	height: 350px;
+}
+
+
+/*PRIVACY and Staff page rule sets----------------------------------------------*/
+
+
+/*privacy page list - include bullet points */
+.priv-li {
+	list-style-type: disc;
+}
+
+/* Staff tables - change header default */
+.table-header {
+	font-weight:normal;
+}
+
+.table1, .table2 {
+	display:none;
+	max-width:768px;
+	/*center table*/
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.table3 {
+	max-width:768px;
+	/*center table*/
+	margin-left:auto;
+	margin-right:auto;
+}
+/* display table when it is classed as active*/
+.table1.active, .table2.active {
+	display:block;
+}
+
+
+/* MEDIA QUERIES -------------------------------------------------------*/
+/*small devices - mobiles 600px and less*/
+@media only screen and (max-width: 600px) {
+
+	.nav-menu {
+        top:0;
+        background-color: #fff;
+        width: 100%;
+		height: 100vh;
+		position: fixed; /*stay in place*/
+		z-index: 1; /* Sit on top of other content*/
+		left: -100%; /*hide panel off-screen*/
+    }
+
+    .nav-menu.active{
+        left: 0; /*slide panel in from left*/
+    }
+
+	/*menu icon*/
+    .hamburger {
+        display: flex; 
+		flex-direction: column;
+        cursor: pointer;
+		float:right;
+		padding:10px;
+    }
+	
+	/*display on top of menu*/
+	.bar {
+		z-index:2;
+	}
+
+	/*animation - middle bar disappears*/
+	.hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+	/* top and bottom bars change position to form cross*/
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+	/*delete social media icon box (links) on mobile*/	
+	.icon-box {
+		display:none;
+	}
+
+	/* change menu alignment on smaller screens*/
+	.myMenus {
+		text-align: center !important;
+	}
+
+	/*adjust sizing of map on contact page*/
+	#map {
+		width:200px !important;
+		height:200px !important;
+	}
+	
+	/* alternative image sizes for reservations page*/
+	#main::before {
+		background-image: url("../images/reservation_XS_webp.webp");
+
+	}
+	/* make slide1 image visible - no slideshow for mobiles*/
+	#slide1 {
+		display:block;
+	}
+	/*disable slide container and expand image to take up screen width.*/
+	#slide {
+		width:100%;
+		margin:0;
+	}
+	/* center the map and text on small devices*/
+	.location-container {
+		display: flex;
+		flex-flow:column;
+		text-align: center;
+		align-items:center;
+	}
+
+}
+
+
+/*small-medium devices such as portrait tablets 0-768px*/
+@media only screen and (max-width: 768px) {
+
+	/*disable slide container and expand image to take up screen width.*/
+	#slide {
+		width:100%;
+		margin:0;
+	}
+
+	#haukai {
+		font-size:2.25rem; /*36px*/
+	}
+
+	#restaurant {
+		font-size: 1rem; /*16px*/
+	}
+	/*home page feature text container padding*/
+	.text-container {
+		padding: 5% 5%;
+	}
+	h3.menu-heading, h3.body-heading {
+		font-size: 1.375rem;/*22px*/
+	}
+	p.menu-item, p.feature-text {
+		font-size: 1.125rem; /*18px*/
+	}
+
+	body {
+		font-size: 0.9375rem; /*15px */
+	}
+
+	/* alternative image sizes for reservations page*/
+	#main::before {
+		background-image: url("../images/reservation_S_webp.webp");
+	}
+
+}
+
+
+
+/* Medium devices (landscape tablets, 768px - 991px) */
+@media only screen and (min-width: 768px) {
+		
+	#haukai {
+		font-size:2.8rem; /*44.8px*/
+	}
+
+	#restaurant {
+		font-size: 1.125rem; /*18px*/
+	}
+	/*home -feature text container size up*/
+	.text-container {
+		padding: 10% 7.5%;
+	}
+	p.feature-text {
+		font-size:1.375rem; /*22px*/
+	}
+	h3.menu-heading, h3.body-heading {
+		font-size: 1.5rem;/*24px*/
+	}
+	p.menu-item {
+		font-size: 1.2rem;/*19.2px*/
+	}
+	body {
+		font-size:1rem; /*16px*/
+	}
+
+	/*about page extra padding for bigger devices*/
+	.extra-padding {
+	padding: 7.5% 10% 20% 10% !important;
+}
+
+	/* alternative image sizes for reservations page*/
+	#main::before {
+		background-image: url("../images/reservation_M.jpg");
+	}
+
+	/*functions text blocks - add padding for larger screens and center items*/
+	.w3-panel {
+		width: 75%;
+		margin-left: 12.5%;
+		margin-right: 12.5%;
+	}
+
+}
+
+/* Large devices (laptops/desktops, 992px - 1199px) */
+@media only screen and (min-width: 992px) {
+	
+	#haukai {
+		font-size:3rem; /*48px*/
+	}
+
+	#restaurant {
+		font-size: 1.2rem;/*19.2px*/
+	}
+
+	/*home -feature text container size up*/
+	.text-container {
+		padding: 20% 15%;
+	}
+	h3.menu-heading, h3.body-heading, p.feature-text {
+		font-size: 1.625rem; /*26px*/
+	}
+
+	p.menu-item {
+		font-size: 1.3rem;/*20.8px*/
+	}
+
+	p.menu-description, p.drinks {
+		font-size:1.125rem;/*18px*/
+	}
+	/* alternative image sizes for reservations page*/
+	#main::before {
+		background-image: url("../images/reservation_L.jpg");
+	}
+
+
+}
+
+
+/* large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	
+	#haukai {
+		font-size:3.2rem; /*51.2px*/
+	}
+
+	#restaurant {
+		font-size: 1.3rem; /*20.8px */
+	}
+
+	/*home -feature text container size up*/
+	.text-container {
+		padding: 20% 15%;
+	}
+
+	h3.menu-heading, h3.body-heading, p.feature-text {
+		font-size: 1.75rem; /*28px*/
+	}
+	
+	p.menu-item {
+		font-size: 1.4rem;/*22.4px*/
+	}
+	p.menu-description, p.drinks  {
+		font-size: 1.25rem;/*20px*/
+	}
+	/* alternative image sizes for reservations page*/
+	#main::before {
+		background-image: url("../images/reservation_XL.jpg");
+	}
+
+}
+
+
+@media only screen and (min-height:1024px) {
+
+
+	/* increase size on tall screens*/
+	h3.body-heading {
+		font-size:2.2rem;
+	}
+
+	body {
+		font-size: 1.3rem;
+	}
+
+	/*home -feature text container size up */
+	.text-container {
+		padding: 20% 15%;
+	}
+
+}
+

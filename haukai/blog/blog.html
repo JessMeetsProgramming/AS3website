@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta
+			charset="utf-8"
+			name="viewport"
+			content="width=device-width, height=device-height, initial-scale=1.0"
+		/>
+        <title>Blog | HAUKAI</title>
+		<!--W3.css framework link (primary styling)-->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
+		<!-- My CSS rules (secondary styling)-->      
+		<link rel="stylesheet" href="../styles/styles.css" />
+		<!--navigation script-->
+		<script src="../scripts/nav-menu.js"></script>
+
+    </head>
+
+
+    <body class="w3-light-gray">
+
+		<!--Header with logo and restaurant name-->
+		<header class="w3-row w3-light-gray">
+
+			<!--use display container to center text on top of the logo-->
+			<div class="w3-display-container w3-center w3-padding w3-margin">
+				<img
+					class="w3-opacity"
+					id="logo"
+					src="../images/koru_logo3.svg"
+					alt="Koru Design"
+				/>
+				<!--display-middle centers headers within display-container-->
+				<a href="../index.html" class="w3-display-middle">
+					<!--default headings in w3.css are segoe ui-->
+					<h1 id="haukai">THE HAUKAI</h1>
+					<h2 id="restaurant"><b>RESTAURANT</b></h2>
+				</a>
+			</div>
+
+			<!--Social media icons/links-->
+			<div class="w3-container w3-display-topright w3-padding">
+				<a href="https://www.facebook.com/">
+					<!--Facebook icon-->
+					<picture>
+						<!--prevent picture from loading when on small devices-->
+						<source
+							srcset="../images/blank_img.png"
+							media="(max-width:600px)"
+						/>
+						<img
+							src="../images/facebook-round-color.svg"
+							class="icons"
+							alt="facebook icon"
+						/>
+					</picture>
+				</a>
+				<a href="https://www.instagram.com/">
+					<!--Instagram icon-->
+					<picture>
+						<!--prevent picture from loading when on small devices-->
+						<source
+							srcset="../images/blank_img.png"
+							media="(max-width:600px)"
+						/>
+						<img
+							src="../images/instagram-round.svg"
+							class="icons"
+							alt="instagram icon"
+						/>
+					</picture>
+				</a>
+			</div>
+		</header>
+
+
+		<!-- Responsive menu - changes to hamburger menu on mobile/small tablet-->
+		<nav class="w3-bar w3-light-gray w3-large w3-mobile">
+			<!--keeping ul and li tags for screen readers-->
+			<ul class="nav-menu w3-mobile">
+				<!--w3-mobile applies block display and 100% width-->
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a class="w3-hover-text-teal" href="../index.html">Home</a>
+				</li>
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a
+						class="w3-hover-text-teal"
+						href="../about/about.html"
+						>About</a
+					>
+				</li>
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a class="w3-hover-text-teal" href="../reservations/reservations.html"
+						>Reservations</a
+					>
+				</li>
+				<!--Float this block of menu items right-->
+				<div class="w3-right w3-mobile">
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="../menu/menu.html"
+						>Menu</a>
+					</li>
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal active-link" href="../blog/blog.html" aria-current="page">Blog</a>
+					</li>
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="../contact/contact.html"
+							>Contact</a
+						>
+					</li>
+				</div>
+			</ul>
+
+			<!--hamburger icon display for mobile-->
+			<div class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+		</nav>
+
+		
+		<main>			
+			<!-- w3-content defines a container for fixed size centered content, 
+			and is wrapped around the whole page content, except for the footer/header -->
+			<div class="w3-content" style="max-width:1400px">
+			<!-- Blog Header -->
+				<div class="w3-container w3-center w3-padding-32 w3-white w3-margin-bottom"> 
+					<h3 class="body-heading">OUR BLOG</h3>
+					<p>Welcome to our blog, here you will find traditional recipes, educational material about our culture &amp; kai and more </p>
+				</div>	
+
+				<!-- Grid container --> 
+				<div class="w3-row">
+				
+					<!-- Blog entry -->
+					<div class="w3-container w3-half w3-margin-bottom" >
+						<div class="w3-card-4 w3-white w3-round-large">  
+							<picture>
+								<source class="blog-img" srcset="../images/pork_and_puha_sml.webp" media="(max-width: 600px)" />
+								<img class="blog-img" src="../images/pork_and_puha3.jpg" alt="Boil up - 2 pots" >
+							</picture>
+							<!--title, description, date-->
+							<div class="w3-container">
+								<h3 class="body-heading">Pork and Puha</h3>
+								<p><b>Learn how to make this simple but delicious Maori staple, </b><span class="w3-opacity">Jan 15, 2022</span></p>
+							</div>
+
+							<!--Paragraph, button and comments-->
+							<div class="w3-container">
+								<p class="w3-hide-small">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+								tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+								<div class="w3-row">
+									<div class="w3-col m8 s12">
+										<p><button class="w3-button w3-block w3-padding w3-white w3-border w3-round"><b>READ MORE »</b></button></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+					<!-- Blog entry -->
+					<div class="w3-container w3-half w3-margin-bottom" >
+						<div class="w3-card-4 w3-white w3-round-large"> 
+							<picture>
+								<source class="blog-img" srcset="../images/fern_blog_sml.webp" media="(max-width: 600px)" />
+								<img class="blog-img" src="../images/fern_blog.jpg" alt="fern shoot">
+							</picture>	
+							<!--title, description, date-->
+							<div class="w3-container">
+								<h3 class="body-heading">Karakia</h3>
+								<p><b>The importance of karakia and other customs in Maori culture, </b><span class="w3-opacity">October 2, 2020</span></p>
+							</div>
+
+							<!--Paragraph, button and comments-->
+							<div class="w3-container">
+								<p class="w3-hide-small">Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
+								tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+								<div class="w3-row">
+									<div class="w3-col m8 s12">
+										<p><button class="w3-button w3-block w3-padding w3-white w3-border w3-round"><b>READ MORE »</b></button></p>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>	
+					<!-- END BLOG ENTRIES -->
+				
+					<!-- END GRID -->
+				</div><br>
+
+			<!-- END w3-content -->
+			</div>
+
+		</main>
+
+
+		<footer class="w3-row w3-padding-large footer-container">
+			<!--address-->
+			<div class="w3-col m3 l3 w3-padding-small">
+				<p>
+					<strong>The Haukai Restaurant</strong><br />1 Island Street<br />Kerikeri<br />Bay
+					of Islands<br />(09) 401 4019
+				</p>
+			</div>
+
+			<!--Opening hours-->
+			<div class="w3-col m7 l7 w3-padding-small">
+				<p>
+					<strong>Opening Hours</strong><br />Wednesday-Sunday<br />11.30am-10.30pm
+				</p>
+			</div>
+
+			<!--privacy statement link-->
+			<div class="w3-col m2 l2 w3-padding-small" id="footer-links">
+				<p>
+					<a class="links" href="../privacy/privacy.html">Privacy</a>
+				</p>
+				<p><a class="links" href="../staff/staff.html">Staff</a></p>
+			</div>
+		</footer>
+		
+	</body>
+</html>
+
+

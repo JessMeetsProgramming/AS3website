@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta
+			charset="utf-8"
+			name="viewport"
+			content="width=device-width, height=device-height, initial-scale=1.0"
+		/>
+        <title>Privacy | HAUKAI</title>
+
+		<!--W3.CSS framework link (primary styling)-->
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
+		<!-- My CSS rules (secondary styling)-->    
+		<link rel="stylesheet" href="../styles/styles.css" />
+		<!-- Nav script-->
+		<script src="../scripts/nav-menu.js"></script>
+
+	</head>
+
+
+    <body>
+		<!--Header with logo and restaurant name-->
+		<header class="w3-row w3-light-gray">
+
+			<!--use display container to center text on top of the logo-->
+			<div class="w3-display-container w3-center w3-padding w3-margin">
+				<img
+					class="w3-opacity"
+					id="logo"
+					src="../images/koru_logo3.svg"
+					alt="Koru Design"
+				/>
+				<!--display-middle centers headers within display-container-->
+				<a href="../index.html" class="w3-display-middle">
+					<!--default headings in w3.css are segoe ui-->
+					<h1 id="haukai">THE HAUKAI</h1>
+					<h2 id="restaurant"><b>RESTAURANT</b></h2>
+				</a>
+			</div>
+
+			<!--Social media icons/links-->
+			<div class="w3-container w3-display-topright w3-padding">
+				<a href="https://www.facebook.com/">
+					<!--Facebook icon-->
+					<picture>
+						<!--prevent picture from loading when on small devices-->
+						<source
+							srcset="../images/blank_img.png"
+							media="(max-width:600px)"
+						/>
+						<img
+							src="../images/facebook-round-color.svg"
+							class="icons"
+							alt="facebook icon"
+						/>
+					</picture>
+				</a>
+				<a href="https://www.instagram.com/">
+					<!--Instagram icon-->
+					<picture>
+						<!--prevent picture from loading when on small devices-->
+						<source
+							srcset="../images/blank_img.png"
+							media="(max-width:600px)"
+						/>
+						<img
+							src="../images/instagram-round.svg"
+							class="icons"
+							alt="instagram icon"
+						/>
+					</picture>
+				</a>
+			</div>
+		</header>
+
+		
+		<!-- Responsive menu - changes to hamburger menu on mobile/small tablet-->
+		<nav class="w3-bar w3-light-gray w3-large w3-mobile">
+			<!--keeping ul and li tags for screen readers-->
+			<ul class="nav-menu w3-mobile">
+				<!--w3-mobile applies block display and 100% width-->
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a class="w3-hover-text-teal" href="../index.html">Home</a>
+				</li>
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a
+						class="w3-hover-text-teal"
+						href="../about/about.html"
+						
+						>About</a
+					>
+				</li>
+				<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+					<a class="w3-hover-text-teal" href="../reservations/reservations.html"
+						>Reservations</a
+					>
+				</li>
+				<!--Float this block of menu items right-->
+				<div class="w3-right w3-mobile">
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="../menu/menu.html"
+						>Menu</a>
+					</li>
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="../blog/blog.html">Blog</a>
+					</li>
+					<li class="w3-bar-item w3-button w3-hover-none w3-mobile">
+						<a class="w3-hover-text-teal" href="../contact/contact.html"
+							>Contact</a
+						>
+					</li>
+				</div>
+			</ul>
+
+			<!--hamburger icon display for mobile-->
+			<div class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+		</nav>
+
+
+		<main class="w3-container w3-padding-large w3-margin">
+		
+			<!--Privacy statement goes here-->
+				<h3 class="body-heading"><br/>Privacy Statement</h3>
+				<p class="w3-section">We collect personal information from you, including information about your:</p>
+					<ul class="w3-ul w3-margin-left">
+						<li class="w3-padding-small priv-li">name</li>
+						<li class="w3-padding-small priv-li">contact information</li>
+						<li class="w3-padding-small priv-li">interactions with us</li>
+					</ul>
+				<p class="w3-section">We collect your personal information in order to:</p>
+					<ul class="w3-ul w3-margin-left">
+						<li class="w3-padding-small priv-li">provide online booking services to our customers and to be able to
+						contact them regarding the services they are requesting.</li>
+						<li class="w3-padding-small priv-li">track how users interact with our website to improve the user experience 
+						and to provide further functionality to The Haukai Restaurant customers and staff.</li>
+					</ul>
+				<p class="w3-section">Providing some information is optional: 
+					<ul class="w3-ul w3-margin-left">
+						<li class="w3-padding-small priv-li">If you choose not to enter name and contact details, 
+						we&apos;ll be unable to confirm table reservations or respond to queries.</li>
+						<li class="w3-padding-small priv-li">If you choose not to allow cookies we'll be unable to use analytics to provide a more 
+						tailored visitor experience.</li>
+					</ul>
+					<br/>You have the right to ask for a copy of any personal information we hold about you, 
+					and to ask for it to be corrected if you think it is wrong. 
+				</p>
+				<p class="w3-section">If you&apos;d like to ask for a copy 
+				of your information, or to have it corrected, please contact us at haukairestaurant@gmail.com, or (09) 401 4019.
+				</p>
+		</main>
+
+
+
+		<footer class="w3-row w3-padding-large footer-container">
+			<!--address-->
+			<div class="w3-col m3 l3 w3-padding-small">
+				<p>
+					<strong>The Haukai Restaurant</strong><br />1 Island Street<br />Kerikeri<br />Bay
+					of Islands<br />(09) 401 4019
+				</p>
+			</div>
+
+			<!--Opening hours-->
+			<div class="w3-col m7 l7 w3-padding-small">
+				<p>
+					<strong>Opening Hours</strong><br />Wednesday-Sunday<br />11.30am-10.30pm
+				</p>
+			</div>
+
+			<!--privacy statement link-->
+			<div class="w3-col m2 l2 w3-padding-small" id="footer-links">
+				<p>
+					<a class="links" href="/privacy/privacy.html" aria-current="page">Privacy</a>
+				</p>
+				<p><a class="links" href="../staff/staff.html">Staff</a></p>
+			</div>
+		</footer>
+
+	</body>
+</html>
+
