@@ -1,5 +1,5 @@
 // if user resizes browser window - refresh the page so that the slideshow will stop and start depending on screen size
-window.onresize = function(){ location.reload(); }
+window.onresize = function() { location.reload(); 
 
 // if screen width is greater than 600px run the script
 if (document.documentElement.clientWidth > 600) {
@@ -39,4 +39,5 @@ if (document.documentElement.clientWidth > 600) {
 
 
     });
+}
 }
