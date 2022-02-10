@@ -12,7 +12,7 @@ $(window).bind('resize', function(e)
   {
     this.location.reload(true); /* true to get page from server */
   }, 200);
-});
+
 
   // if screen width is greater than 600px run the script
     if (document.documentElement.clientWidth > 600) {
@@ -53,7 +53,7 @@ $(window).bind('resize', function(e)
 
     });
     }
-
+});
 
 
 
