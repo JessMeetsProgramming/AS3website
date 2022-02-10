@@ -1,11 +1,18 @@
-
+// if user resizes browser window - refresh the page so that the slideshow will stop and start depending on screen size
+//window.onresize = function() { 
+//    location.reload();
+ //   break;
+//}
 
 //refresh page on browser resize
-//$(window).bind('resize', function(e)
-//{
-  //console.log('window resized..');
-  //this.location.reload(true); /* false to get page from cache */
-  /* true to fetch page from server */
+$(window).bind('resize', function(e)
+{
+  if (window.RT) clearTimeout(window.RT);
+  window.RT = setTimeout(function()
+  {
+    this.location.reload(true); /* true to get page from server */
+  }, 200);
+});
 
   // if screen width is greater than 600px run the script
     if (document.documentElement.clientWidth > 600) {
@@ -47,10 +54,6 @@
     });
     }
 
-//});
-// if user resizes browser window - refresh the page so that the slideshow will stop and start depending on screen size
-window.onresize = function() { 
-    location.reload();
-    break;
-}
+
+
 
