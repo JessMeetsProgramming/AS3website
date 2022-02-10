@@ -7,10 +7,7 @@ $(window).bind('resize', function(e)
   console.log('window resized..');
   this.location.reload(true); /* false to get page from cache */
   /* true to fetch page from server */
-  
-});
-
-// if screen width is greater than 600px run the script
+  // if screen width is greater than 600px run the script
 if (document.documentElement.clientWidth > 600) {
 
 
@@ -50,5 +47,8 @@ if (document.documentElement.clientWidth > 600) {
     });
 }
 else {
-    break;
+    return;
 }
+});
+
+
