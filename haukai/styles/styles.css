@@ -4,7 +4,10 @@ h3.body-heading {
 }
 
 /*HEADER rule sets----------------------------------------------------*/
-
+header {
+	padding-top:10px;
+	padding-bottom:3px;
+}
 #haukai {
 	/*change spacing between lines*/
 	line-height:1.2;
@@ -13,11 +16,8 @@ h3.body-heading {
 #logo {
 	width: 13vmax;
 	/*prevent logo being too big for header*/
-	max-height:130px;	
-}
-
-header {
-	max-height:140px;
+	max-width:100px;	
+	margin-top: 8px;
 }
 
 /*social media icons*/
