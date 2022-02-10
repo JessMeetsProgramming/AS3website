@@ -1,18 +1,18 @@
-// if user resizes browser window - refresh the page so that the slideshow will stop and start depending on screen size
-//window.onresize = function() { location.reload(); 
+
 
 //refresh page on browser resize
-$(window).bind('resize', function(e)
-{
-  console.log('window resized..');
-  this.location.reload(true); /* false to get page from cache */
+//$(window).bind('resize', function(e)
+//{
+  //console.log('window resized..');
+  //this.location.reload(true); /* false to get page from cache */
   /* true to fetch page from server */
+
   // if screen width is greater than 600px run the script
     if (document.documentElement.clientWidth > 600) {
 
 
     //run script when document has loaded
-    //$(document).ready(function() {
+    $(document).ready(function() {
     
         // declare slideindex variable to count slides
         var slideIndex = 0;
@@ -44,9 +44,13 @@ $(window).bind('resize', function(e)
         }
 
 
-    //});
+    });
     }
 
-});
-
+//});
+// if user resizes browser window - refresh the page so that the slideshow will stop and start depending on screen size
+window.onresize = function() { 
+    location.reload();
+    break;
+}
 
