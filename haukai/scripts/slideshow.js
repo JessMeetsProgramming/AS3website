@@ -3,7 +3,8 @@
     window.onresize = function() { 
     location.reload(true); //reload from server instead of cache
     continue; // breaks out of entire script?? change to return or timeout somehow        
-
+    }
+    
     //run script when document has loaded
     $(document).ready(function() {
 
@@ -42,6 +43,6 @@
         }
     });
 
-}
+
 
 
