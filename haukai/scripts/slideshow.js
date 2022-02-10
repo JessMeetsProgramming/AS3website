@@ -8,11 +8,11 @@ $(window).bind('resize', function(e)
   this.location.reload(true); /* false to get page from cache */
   /* true to fetch page from server */
   // if screen width is greater than 600px run the script
-if (document.documentElement.clientWidth > 600) {
+    if (document.documentElement.clientWidth > 600) {
 
 
     //run script when document has loaded
-    $(document).ready(function() {
+    //$(document).ready(function() {
     
         // declare slideindex variable to count slides
         var slideIndex = 0;
@@ -44,11 +44,9 @@ if (document.documentElement.clientWidth > 600) {
         }
 
 
-    });
-}
-else {
-    return;
-}
+    //});
+    }
+
 });
 
 
