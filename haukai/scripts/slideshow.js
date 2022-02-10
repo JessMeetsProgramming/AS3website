@@ -1,11 +1,6 @@
 //run script when document has loaded
 $(document).ready(function() {
 
-    window.onresize = reloadPage;
-
-    function reloadPage() {
-        location.reload();
-    }
     
     // if screen width is greater than 600px run the script
     if (document.documentElement.clientWidth > 600) {
@@ -39,10 +34,7 @@ $(document).ready(function() {
             
         }
 
-    } else {
-        break;
     }
-
 
 });   
 
