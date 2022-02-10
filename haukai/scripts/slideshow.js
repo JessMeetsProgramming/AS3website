@@ -1,10 +1,11 @@
-function reload() { 
-    location.reload(true); //reload from server instead of cache
-    
-
 //run script when document has loaded
 $(document).ready(function() {
 
+    window.onresize = reloadPage;
+
+    function reloadPage() {
+        location.reload();
+    }
     
     // if screen width is greater than 600px run the script
     if (document.documentElement.clientWidth > 600) {
@@ -38,14 +39,13 @@ $(document).ready(function() {
             
         }
 
+    } else {
+        break;
     }
 
 
-});   break;    
-}
+});   
 
-// if user resizes browser window - refresh the page so that the slideshow will stop and start depending on screen size
-window.onresize = reload;
 
 
 
